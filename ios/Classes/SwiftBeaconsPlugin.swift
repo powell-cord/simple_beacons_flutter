@@ -67,7 +67,7 @@ public class SwiftBeaconsPlugin: NSObject, FlutterPlugin {
             stopScanning()
             result("Stopped scanning Beacons.")
         }else if call.method == "runInBackground"{
-            runInBackground = true
+            runInBackground = false
             result("App will run in background? \(runInBackground)")
         }else {
             result("Flutter method not implemented on iOS")
