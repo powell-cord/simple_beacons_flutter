@@ -92,13 +92,13 @@ public class SwiftBeaconsPlugin: NSObject, FlutterPlugin {
 
     func startMonitoringItem(_ item: Item) {
         let beaconRegion = item.asBeaconRegion()
-        locationManager.startMonitoring(for: beaconRegion)
+        //locationManager.startMonitoring(for: beaconRegion)
         locationManager.startRangingBeacons(in: beaconRegion)
     }
 
     func stopMonitoringItem(_ item: Item) {
         let beaconRegion = item.asBeaconRegion()
-        locationManager.stopMonitoring(for: beaconRegion)
+        //locationManager.stopMonitoring(for: beaconRegion)
         locationManager.stopRangingBeacons(in: beaconRegion)
     }
 
