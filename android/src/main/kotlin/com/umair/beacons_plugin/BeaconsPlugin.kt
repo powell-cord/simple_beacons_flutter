@@ -239,11 +239,7 @@ class BeaconsPlugin : FlutterPlugin, ActivityAware,
 
         @JvmStatic
         private fun requestPermission() {
-            if (areBackgroundScanPermissionsGranted()) {
-                requestLocationPermissions()
-            } else {
-                requestBackgroundPermission()
-            }
+            requestLocationPermissions()
         }
 
         private fun requestLocationPermissions() {
@@ -256,7 +252,7 @@ class BeaconsPlugin : FlutterPlugin, ActivityAware,
                                 arrayOf(
                                     Manifest.permission.ACCESS_FINE_LOCATION,
                                     Manifest.permission.ACCESS_COARSE_LOCATION,
-                                    Manifest.permission.ACCESS_BACKGROUND_LOCATION
+                                    
                                 ),
                                 REQUEST_LOCATION_PERMISSIONS
                             )
@@ -283,7 +279,7 @@ class BeaconsPlugin : FlutterPlugin, ActivityAware,
 
         @JvmStatic
         private fun requestBackgroundPermission() {
-            if (!isPermissionDialogShown()) {
+           /* if (!isPermissionDialogShown()) {
                 currentActivity?.let {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                         //if (it.shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_BACKGROUND_LOCATION)) {
@@ -301,7 +297,7 @@ class BeaconsPlugin : FlutterPlugin, ActivityAware,
                         //}
                     }
                 }
-            }
+            }*/
         }
 
         @JvmStatic
