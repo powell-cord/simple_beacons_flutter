@@ -394,7 +394,7 @@ class BeaconsPlugin : FlutterPlugin, ActivityAware,
         currentActivity = activityPluginBinding.activity
         BeaconPreferences.init(currentActivity)
         activityPluginBinding.addRequestPermissionsResultListener(this)
-        //requestPermission()
+        requestPermission()
 
         if (arePermissionsGranted()) {
             sendBLEScannerReadyCallback()
